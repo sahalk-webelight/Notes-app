@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/styles/style.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title>Notes</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">Notes App</h1>
+            <h2 class="header__subtitle">One stop for all your notes!</h2>
+        </div>
+    </header>
+    
+    <div class="actions">
+        <div class="actions__container row">
+            <div class="layer1">
+                <input type="text" id="search-text" class="input" placeholder="Filter Notes">
+            </div>
+            <div class="layer2">
+                <select name="" id="filter-by" class="dropdown">
+                    <option value="byEdited">Sort by last edited</option>
+                    <option value="byCreated">Sort by last created</option>
+                    <option value="byAlpha">Sort Alphabatically</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="container">
+        <div id="notes"></div>
+        <button id="create-note" class="button">Create Note</button>
+    </div>
+    <script src="/scripts/index-bundle.js"></script>
+    <!-- <script src="/scripts/notes.js"></script>
+    <script src="/scripts/views.js"></script>
+    <script src="/scripts/filters.js"></script>
+    <script src="/scripts/index.js"></script> -->
+</body>
+</html>
