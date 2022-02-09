@@ -15,6 +15,10 @@ body {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 1.6rem;
 	overflow-y: scroll;
+	/* background-image: url("https://assets.website-files.com/5e51c674258ffe10d286d30a/5e5355117488c21dec47cfba_peep-34.svg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center; */
 }
 
 button {

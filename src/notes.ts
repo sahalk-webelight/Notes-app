@@ -21,7 +21,7 @@ const createNote = () => {
 	const id = uuidv4()
 	const createdAt = moment().valueOf()
 	notes.push({
-		title: "",
+		title: "UnNamed Note",
 		body: "",
 		id,
 		createdAt,
@@ -93,7 +93,7 @@ const updateNote = (id, updates) => {
 	}
 
 	if (typeof updates.title === "string") {
-		note.title = updates.title
+		note.title = updates.title !== "" ? updates.title : "UnNamed Note"
 		note.updatedAt = moment().valueOf()
 	}
 

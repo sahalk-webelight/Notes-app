@@ -10,7 +10,7 @@ var noteId = location.hash.substring(1);
 (0, views_1.initializeEditPage)(noteId);
 noteTitleEl.addEventListener("input", function (e) {
     var note = (0, notes_1.updateNote)(noteId, {
-        title: e.target.value,
+        title: e.target.value.trim(),
     });
     updatedTimeEl.textContent = (0, views_1.generateLastEdited)(note.updatedAt);
 });
@@ -21,8 +21,11 @@ noteBodyEl.addEventListener("input", function (e) {
     updatedTimeEl.textContent = (0, views_1.generateLastEdited)(note.updatedAt);
 });
 removeNoteBtn.addEventListener("click", function (e) {
-    (0, notes_1.removeNote)(noteId);
-    (0, views_1.redirectToHome)();
+    var alertText = "Are you sure want to remove note ?";
+    if (confirm(alertText) == true) {
+        (0, notes_1.removeNote)(noteId);
+        (0, views_1.redirectToHome)();
+    }
 });
 window.addEventListener("storage", function (e) {
     if (e.key === "notes") {

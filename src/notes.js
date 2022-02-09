@@ -22,7 +22,7 @@ var createNote = function () {
     var id = (0, uuid_1.v4)();
     var createdAt = moment().valueOf();
     notes.push({
-        title: "",
+        title: "UnNamed Note",
         body: "",
         id: id,
         createdAt: createdAt,
@@ -98,7 +98,7 @@ var updateNote = function (id, updates) {
         return;
     }
     if (typeof updates.title === "string") {
-        note.title = updates.title;
+        note.title = updates.title !== "" ? updates.title : "UnNamed Note";
         note.updatedAt = moment().valueOf();
     }
     if (typeof updates.body === "string") {

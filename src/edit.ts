@@ -15,7 +15,7 @@ type HTMLElementEvent<T extends HTMLElement> = Event & {
 
 noteTitleEl.addEventListener("input", (e: HTMLElementEvent<HTMLInputElement>) => {
 	const note = updateNote(noteId, {
-		title: e.target.value,
+		title: e.target.value.trim(),
 	})
 
 	updatedTimeEl.textContent = generateLastEdited(note.updatedAt)
@@ -29,8 +29,11 @@ noteBodyEl.addEventListener("input", (e: HTMLElementEvent<HTMLInputElement>) => 
 })
 
 removeNoteBtn.addEventListener("click", (e) => {
-	removeNote(noteId)
-	redirectToHome()
+	const alertText = "Are you sure want to remove note ?"
+	if (confirm(alertText) == true) {
+		removeNote(noteId)
+		redirectToHome()
+	}
 })
 
 window.addEventListener("storage", (e) => {
