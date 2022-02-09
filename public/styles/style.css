@@ -147,8 +147,6 @@ a {
 	width: 100%;
 }
 
-/* Note List Item */
-
 .list-item {
 	text-decoration: none;
 	color: #333333;
@@ -197,4 +195,123 @@ a {
 		grid-column: 1;
 		grid-row: 2;
 	}
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+	position: relative;
+	background-color: #fefefe;
+	margin: auto;
+	padding: 0;
+	border: 1px solid #888;
+	width: 75%;
+	box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s;
+	border-radius: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+	.modal-content {
+		position: relative;
+		background-color: #fefefe;
+		margin: auto;
+		padding: 0;
+		border: 1px solid #888;
+		width: 450px;
+		box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		-webkit-animation-name: animatetop;
+		-webkit-animation-duration: 0.4s;
+		animation-name: animatetop;
+		animation-duration: 0.4s;
+	}
+}
+
+@-webkit-keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+.modal-header {
+	padding: 2px 16px;
+	background-color: #43799c;
+	margin-bottom: 2em;
+	border-radius: 6px 6px 0px 0px;
+}
+
+.modal-body {
+	padding: 2px 16px;
+}
+
+.modal-footer {
+	padding: 2px 16px;
+	margin-top: 1em;
+	background-color: white;
+	color: white;
+	border-radius: 0px 0px 6px 6px;
+	content: "";
+	clear: both;
+	display: table;
+	margin-right: 0;
+}
+
+.alert-button {
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+}
+
+.alert-button:hover {
+	opacity: 1;
+}
+
+.cancelbtn,
+.deletebtn {
+	float: left;
+	width: 50%;
+}
+
+.cancelbtn {
+	background-color: #ccc;
+	color: black;
+}
+
+.deletebtn {
+	background-color: #f44336;
 }

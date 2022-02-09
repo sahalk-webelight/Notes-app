@@ -17,10 +17,31 @@
     </div>
 	<div class="actions">
 		<div class="actions__container actions__container--spaced">
-			<a href="/index.html">Home</a>
+			<a href="/index.html"> Home</a>
 			<span id="updated-time"></span>
 		</div>
 	</div>
+<!-- modal -->
+
+<div id="myModal" class="modal">
+
+	<!-- Modal content -->
+	<div class="modal-content">
+	  <div class="modal-header header">
+		<!-- <span class="close">&times;</span> -->
+		<h3 class="header__title">Remove Note?</h3>
+	  </div>
+	  <div class="modal-body">
+		<h3>sure you want to remove this note ?</h3>
+	  </div>
+	  <div class="modal-footer">
+		<button id="alert-yes-btn" class="button deletebtn alert-button">Yes!</button>
+		<button id="alert-cancel-btn" class="button button--secondary cancelbtn alert-button">Cancel</button>
+	  </div>
+	</div>
+  
+  </div>
+
 
 	<div class="container">	
 		<input type="text" id="note-title" class="title-input" placeholder="Note title">

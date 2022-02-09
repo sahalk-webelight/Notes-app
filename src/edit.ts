@@ -29,11 +29,22 @@ noteBodyEl.addEventListener("input", (e: HTMLElementEvent<HTMLInputElement>) => 
 })
 
 removeNoteBtn.addEventListener("click", (e) => {
+	const modal = <HTMLElement>document.querySelector("#myModal")
+	modal.style.display = "block"
 	const alertText = "Are you sure want to remove note ?"
-	if (confirm(alertText) == true) {
+	const alertYes = <HTMLElement>document.querySelector("#alert-yes-btn")
+	const alertCancel = <HTMLElement>document.querySelector("#alert-cancel-btn")
+	alertYes.addEventListener("click", (e) => {
 		removeNote(noteId)
 		redirectToHome()
-	}
+	})
+	alertCancel.addEventListener("click", (e) => {
+		modal.style.display = "none"
+	})
+	// if (confirm(alertText) == true) {
+	// 	removeNote(noteId)
+	// 	redirectToHome()
+	// }
 })
 
 window.addEventListener("storage", (e) => {
